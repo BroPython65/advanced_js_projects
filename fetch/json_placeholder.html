@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(resp => {
+        console.log(resp)
+        resp.forEach(element => {
+            container = document.createElement('div')
+            container.innerHTML = `
+                <h1>User ${element.id}</h1>
+                <p>His real name is ${element.name} and nickname is ${element.username}. his email
+                address is ${element.email}. He lives in ${element.address.street} street, ${element.address.city} city,
+                his website domain is ${element.website}.</p>
+                <hr>
+                `
+            document.getElementById('container').appendChild(container)
+        })
+
+    })
+</script>
+</html>
