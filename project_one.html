@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image" width="200" height="200" src="images/ak-47.jpg"/>
+    <br>
+    <button onclick="changeToAk()">Change to ak-47</button>
+    <button onclick="changeToM()">Change to M16</button>
+</body>
+<script type="text/javascript">
+    function changeToAk(){
+        document.getElementById('image').src = 'images/ak-47.jpg'
+    }
+
+    function changeToM(){
+        document.getElementById('image').src = 'images/M16.jpg'
+    }
+</script>
+</html>
